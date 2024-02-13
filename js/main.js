@@ -34,8 +34,8 @@ function sectionLoad(x) {
 
   $(x).ready(function () {
     $("body").css("overflow", "auto");
-    $(".loader").fadeOut(850, function () {
-      $(".loading").fadeOut(850);
+    $(".loader").fadeOut(900, function () {
+      $(".loading").fadeOut(900);
     });
   });
 }
@@ -324,6 +324,7 @@ $("#ingredientsPage").on("click", async function () {
   sectionLoad("#ingredients");
   await getIngredients();
   $("#mainIngredients").on("click", function () {
+    sectionLoad("#home");
     showSection("#home");
   });
 });
