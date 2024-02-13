@@ -1,0 +1,272 @@
+body {
+  overflow: hidden;
+}
+
+.loading {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 80px;
+  height: 40px;
+  padding: 2px 0;
+  box-sizing: border-box;
+  display: flex;
+  animation: l5-0 3s infinite steps(6);
+  background: linear-gradient(#000 0 0) 0 0/0% 100% no-repeat,
+    radial-gradient(circle 3px, #eeee89 90%, #0000) 0 0/20% 100%#000;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: "";
+  width: 20px;
+  transform: translate(-100%);
+  border-radius: 50%;
+  background: #ffff2d;
+  animation: l5-1 0.25s 0.153s infinite steps(5) alternate,
+    l5-2 3s infinite linear;
+}
+@keyframes l5-1 {
+  0% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0,
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      100% 65%,
+      100% 0,
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 35%
+    );
+  }
+}
+@keyframes l5-2 {
+  100% {
+    transform: translate(90px);
+  }
+}
+@keyframes l5-0 {
+  100% {
+    background-size: 120% 100%, 20% 100%;
+  }
+}
+
+/* End of Loaders */
+
+#logo {
+  width: 50px;
+}
+
+#sideControl {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+aside {
+  position: fixed;
+  z-index: 999;
+}
+
+aside i {
+  color: #000;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  padding-left: 0 !important;
+  padding-top: 20px;
+}
+
+#sideBar {
+  display: none;
+}
+
+#menu {
+  height: 100%;
+  background-color: #000;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#menuList li {
+  list-style: none;
+  padding-bottom: 15px;
+}
+
+#menuList li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.copyRight .icons {
+  padding-inline: 5px;
+}
+
+.copyRight .icons p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.copyRight .icons i {
+  color: #fff;
+  padding-right: 5px;
+}
+
+/* End Sidebar */
+
+.imageDetails {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.imageDetails img {
+  width: 100%;
+}
+
+.imageDetails .layer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffffaf;
+  transition: top 1s;
+}
+
+.imageDetails:hover .layer {
+  top: 0;
+}
+
+/* End of Home Page */
+
+#mealDetails h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+#mealDetails p {
+  color: #fff;
+  font-weight: 400;
+}
+
+#mealDetails .description {
+  color: #fff;
+  font-weight: 900;
+}
+
+#mealDetails .description span {
+  font-weight: 400;
+}
+
+#mealDetails .btn1,
+#mealDetails .btn2 {
+  color: #fff;
+  font-size: 17px;
+}
+
+#mealDetails .btn1 {
+  background-color: #157347;
+}
+
+#mealDetails .btn2 {
+  background-color: #dc3545;
+}
+
+#mealDetails li {
+  list-style: none;
+  background-color: #cff4fc;
+  color: #1f8ab9;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* End of Meal Details */
+
+.categoryDetails {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.categoryDetails img {
+  width: 100%;
+}
+
+.categoryDetails .layers {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffffa2;
+  transition: top 1s;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.categoryDetails .layers p {
+  font-size: 15px;
+}
+
+.categoryDetails:hover .layers {
+  top: 0;
+}
+
+/* End of Category Details */
+
+.areaDetails {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+}
+
+/* End of Area Details */
+
+.ingredientsDetails {
+  width: 300px;
+  height: 350px;
+  font-size: 17px;
+  color: #fff;
+}
+
+.ingredientsDetails i {
+  font-size: 100px;
+}
+
+.ingredientsDetails h3 {
+  font-weight: 600;
+}
+
+/* inputs */
+
+.message {
+  background-color: transparent !important;
+  color: rgb(124, 6, 6) !important;
+  border: none !important;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon" />
+
+    <!-- animate cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-black">
+    <main>
+      <div class="loading">
+        <div class="loader"></div>
+      </div>
+
+      <aside class="d-flex h-100">
+        <div id="sideBar">
+          <div id="menu" class="container">
+            <ul
+              id="menuList"
+              class="p-2 pe-5 pt-3 animate__animated animate__fadeOutBottomLeft"
+            >
+              <li>
+                <a href="#search" id="searchPage">Search</a>
+              </li>
+              <li>
+                <a href="#categories" id="categoryPage">Categories</a>
+              </li>
+              <li>
+                <a href="#area" id="areaPage">Area</a>
+              </li>
+              <li>
+                <a href="#ingredients" id="ingredientsPage">Ingredients</a>
+              </li>
+              <li>
+                <a href="#contact" id="contactPage">Contact Us</a>
+              </li>
+            </ul>
+
+            <div class="copyRight">
+              <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+                <p>Copyright Â© 2019 All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="sideControl" class="p-2">
+          <img src="images/logo.png" alt="app-logo" id="logo" />
+          <i class="fa-solid fa-burger fa-2xl" id="closeMenu"></i>
+          <div id="icons">
+            <i class="fa-solid fa-globe d-flex flex-column"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+      </aside>
+
+      <section id="search" class="m-4">
+        <form>
+          <div class="container text-center">
+            <div class="row g-4 d-flex" id="searchInputs">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="NameSearch"
+                    placeholder=" Search By Name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="form-control"
+                    id="letterSearch"
+                    placeholder=" Search By First Letter"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="container">
+          <div class="row g-4 my-4" id="SearchedMeals"></div>
+        </div>
+
+        <div class="container">
+          <div id="NotFound">
+            <img
+              src="images/13315300_5203299.jpg"
+              class="w-100"
+              height="600"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="home" class="m-4">
+        <div class="container">
+          <div class="row g-4" id="mainMeals"></div>
+        </div>
+      </section>
+
+      <section id="mealDetails" class="m-4">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-mg-5 col-lg-4">
+              <div class="image">
+                <img
+                  src=""
+                  alt=""
+                  width="100%"
+                  class="rounded-2"
+                  id="mealImage"
+                />
+                <h2 class="pt-3" id="mealName"></h2>
+              </div>
+            </div>
+
+            <div class="col-mg-7 col-lg-7 offset-lg-1">
+              <div class="description">
+                <h2>Instructions</h2>
+                <p class="py-2" id="mealDesc"></p>
+                <h3>Area : <span id="mealArea"></span></h3>
+                <h3>Category : <span id="mealCate"></span></h3>
+                <h3>Recipes :</h3>
+                <ul class="d-flex flex-wrap" id="recipesList"></ul>
+
+                <h3 class="pt-3">Tags : <span id="tags"></span></h3>
+
+                <div class="my-5" id="btns">
+                  <a
+                    href=""
+                    class="px-3 py-2 rounded-2 btn btn1 me-1"
+                    role="button"
+                    target="_blank"
+                    >Source</a
+                  >
+                  <a
+                    href=""
+                    class="px-3 py-2 rounded-2 btn btn2"
+                    role="button"
+                    target="_blank"
+                    >Youtube</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="categories" class="m-4">
+        <div class="container">
+          <div class="row g-4" id="mainCate"></div>
+        </div>
+      </section>
+
+      <section id="area" class="m-4">
+        <div class="container">
+          <div class="row g-4" id="mainArea"></div>
+        </div>
+      </section>
+
+      <section id="ingredients" class="m-4">
+        <div class="container">
+          <div class="row g-4" id="mainIngredients"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="m-4">
+        <form>
+          <div class="container text-center">
+            <div class="row g-4 d-flex" id="contactDetails">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="InputName"
+                    placeholder=" Enter Your Name"
+                  />
+                </div>
+                <div class="alert message d-none nameAlret">
+                  <h6>Special characters and numbers not allowed</h6>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="InputEmail"
+                    placeholder=" Enter Your Email"
+                  />
+                </div>
+                <div class="alert message d-none emailAlret">
+                  <h6>Email not valid *exemple@gmail or yahoo.com</h6>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="InputPhone"
+                    placeholder=" Enter Your Phone"
+                  />
+                </div>
+                <div class="alert message d-none">
+                  <h6>Enter valid Phone Number</h6>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="InputAge"
+                    placeholder=" Enter Your Age"
+                  />
+                </div>
+                <div class="alert message d-none ageAlret">
+                  <h6>Enter valid age</h6>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="InputPassword"
+                    placeholder=" Enter Your Password"
+                  />
+                </div>
+                <div class="alert message d-none passwordAlret">
+                  <h6>
+                    Enter valid password *Minimum eight characters, at least one
+                    letter and one number:*
+                  </h6>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="InputRePassword"
+                    placeholder=" Repassword"
+                  />
+                </div>
+                <div class="alert message d-none rePasswordAlret">
+                  <h6>Enter valid Repassword</h6>
+                </div>
+              </div>
+            </div>
+            <button
+              id="submitButton"
+              class="border-2 text-danger bg-black border-danger rounded-2 py-2 px-3"
+              disabled
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- jq script -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- main script -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
